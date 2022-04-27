@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Diem_tb() {
+        let a = prompt("nhập giá trị")
+        let n = []
+        for (let i = 0; i < a; i++) {
+            n[i] = prompt("nhập điểm")
+        }
+        let max = 0
+        let max1 = 0
+        let max2 = 0
+        let max3 = 0
+        for (let i = 1; i < n.length; i++) {
+            if (max <= n[i]) {
+                max = n[i];
+            }
+        }
+        for (let i = 0; i < n.length; i++) {
+            if (n[i] === max) {
+                continue
+            } else if (n[i] >= max1) {
+                max1 = n[i]
+            }
+        }
+
+        for (let i = 0; i < n.length; i++) {
+            if (n[i] === max || n[i] === max1) {
+                continue
+            } else if (n[i] >= max2) {
+                max2 = n[i]
+                console.log(max2)
+            }
+        }
+    }
+    Diem_tb()
+</script>
